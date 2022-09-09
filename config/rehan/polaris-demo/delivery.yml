@@ -7,6 +7,7 @@ metadata:
     apps.tanzu.vmware.com/has-tests: "true"
     apps.tanzu.vmware.com/language: java
     apps.tanzu.vmware.com/workload-type: web
+    workload-intent: code-analysis
     app.kubernetes.io/component: run
     carto.run/workload-name: polaris-demo
 spec:
@@ -39,12 +40,13 @@ spec:
         tanzu.app.live.view.application.actuator.port: "8081"
         tanzu.app.live.view.application.flavours: spring-boot
         tanzu.app.live.view.application.name: polaris-demo
+        workload-intent: code-analysis
     spec:
       containers:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: index.docker.io/tapsme/polaris-demo-rehan@sha256:d936a4d6c13f79c5443c48f60326f06b2716b69c8f8c53f071b04f8f29db6f49
+        image: index.docker.io/tapsme/polaris-demo-rehan@sha256:708459bd5ec384bd8ae9b952028df64a3a4267f15ec92c95805bb6544d83f0ba
         livenessProbe:
           httpGet:
             path: /livez
