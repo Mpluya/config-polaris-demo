@@ -46,7 +46,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: index.docker.io/tapsme/polaris-demo-rehan@sha256:6f7f76bdf1d2cb94be1e20dd0ec1582cf53058355db5463eb4addb2c6fb2348d
+        image: index.docker.io/tapsme/polaris-demo-rehan@sha256:b9e4731c43aed1963ef3e50d261acc660686b57c0eb9c4da185ce06abfb250a6
         livenessProbe:
           httpGet:
             path: /livez
