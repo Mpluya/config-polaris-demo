@@ -46,7 +46,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: index.docker.io/tapsme/mae-demo-mae@sha256:976a10611f8b1f5b19bd4ba34d808b260bc9cd70e63b80307202f9200ba2eaf4
+        image: index.docker.io/tapsme/mae-demo-mae@sha256:8903dfc70d7c55145ae897c128005ac4dfdcf1759af1fafe05d5a2a63a1d035a
         livenessProbe:
           httpGet:
             path: /livez
