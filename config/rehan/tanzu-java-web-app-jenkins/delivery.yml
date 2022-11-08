@@ -8,7 +8,6 @@ metadata:
   labels:
     app.kubernetes.io/part-of: tanzu-java-web-app-jenkins
     apps.tanzu.vmware.com/has-tests: "true"
-    apps.tanzu.vmware.com/language: java
     apps.tanzu.vmware.com/workload-type: web
     app.kubernetes.io/component: run
     carto.run/workload-name: tanzu-java-web-app-jenkins
@@ -33,7 +32,6 @@ spec:
         app.kubernetes.io/component: run
         app.kubernetes.io/part-of: tanzu-java-web-app-jenkins
         apps.tanzu.vmware.com/has-tests: "true"
-        apps.tanzu.vmware.com/language: java
         apps.tanzu.vmware.com/workload-type: web
         carto.run/workload-name: tanzu-java-web-app-jenkins
         conventions.apps.tanzu.vmware.com/framework: spring-boot
@@ -46,7 +44,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: index.docker.io/tapsme/tanzu-java-web-app-jenkins-rehan@sha256:709fe6e968996f7974cf83c86d6379574b3c6910b4b99710c1ed508c61b5449c
+        image: index.docker.io/tapsme/tanzu-java-web-app-jenkins-rehan@sha256:04f13f6003274db26b2b5cf15e9a5f370e8196adacd0daea602e476eda508473
         livenessProbe:
           httpGet:
             path: /livez
